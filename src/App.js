@@ -17,7 +17,7 @@ function App() {
     <div className="app">
       <div className="container container-repo">
         <h5 className="title">List Repository</h5>
-      <table class="table table-bordered table-responsive">
+      <table class="table table-bordered table-responsive table-repo">
   <thead>
     <tr>
       <th scope="col">No</th>
@@ -28,11 +28,11 @@ function App() {
   </thead>
   <tbody>
   {data.map((repo,index) => (
-    <tr key={index}>
-      <td>{index}</td>
+    <tr key={index} className="tr-table">
+      <td>{index+1}.</td>
       <td>{repo.id}</td>
       <td>{repo.name}</td>
-      <td><a href={repo.html_url} target="_blank">{repo.html_url}</a></td>
+      <td><a href={repo.html_url} target="_blank" className="url_repo">{repo.html_url}</a></td>
     </tr>
         ))}
   </tbody>
